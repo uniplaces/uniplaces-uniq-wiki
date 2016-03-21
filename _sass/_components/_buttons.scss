@@ -1,0 +1,64 @@
+@mixin button() {
+  position: relative;
+  display: table;
+  background-color: color('primary');
+  border-radius: 4px;
+  text-align: center;
+  color: color('primary', 'contrast');
+  @include padding();
+  @include button-text();
+
+  will-change: background-color;
+  transition: background-color $animation-duration $swiftOut;
+  @include backface-hack();
+
+  &:hover {
+    cursor: pointer;
+    background-color: color('primary', 'medium');
+  }
+  &:active {
+    background-color: color('primary', 'dark');
+  }
+
+  &--success,
+  &--error,
+  &--warning,
+  &--disabled {
+    color: color('primary', 'contrast');
+  }
+
+  &--success {
+    background-color: color('success');
+    color: color('primary', 'contrast');
+
+    &:hover {
+      background-color: color('success', 'light');
+      color: color('success');
+    }
+  }
+  &--error {
+    background-color: color('error');
+    color: color('error', 'contrast');
+
+    &:hover {
+      background-color: color('error', 'light');
+      color: color('error');
+    }
+  }
+  &--warning {
+    background-color: color('warning');
+    color: color('warning', 'contrast');
+
+    &:hover {
+      background-color: color('warning', 'light');
+      color: color('warning');
+    }
+  }
+  &--disabled,
+  &--disabled:hover {
+    cursor: not-allowed;
+
+    background-color: color('gray', 'disabled_light');
+    color: color('primary', 'contrast');
+  }
+}

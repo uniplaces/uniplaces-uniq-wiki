@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Inputs"
+date:   2016-03-18 07:21:01 +0000
+description: "Much like buttons input fields provide a point of data entry to the
+          user,  can also have several states representing all possible states
+          of success."
+categories: "UI-Components"
+---
+<label for="demo">Input Label</label>
+<input type="text" name="demo" placeholder="Placeholder Text">
+<br>
+
+<label for="error">Input Label</label>
+<input type="text" name="error" placeholder="Placeholder Text" class="validation--error">
+<label for="error" class="validation validation--error">This is an error message.</label>
+<br>
+
+<label for="success">Input Label</label>
+<input type="text" name="success" placeholder="Placeholder Text" class="validation--success">
+<label for="success" class="validation validation--success">This is a success message.</label>
+<br>
+
+<label for="warning">Input Label</label>
+<input type="text" name="warning" placeholder="Placeholder Text" class="validation--warning">
+<label for="warning" class="validation validation--warning">This is a warning message.</label>
+<br>
+
+<label for="disabled">Input Label</label>
+<input type="text" name="disabled" placeholder="Placeholder Text" disabled>
