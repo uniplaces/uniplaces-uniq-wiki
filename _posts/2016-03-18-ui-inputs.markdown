@@ -28,3 +28,8 @@ categories: "UI-Components"
 
 <label for="disabled">Input Label</label>
 <input type="text" name="disabled" placeholder="Placeholder Text" disabled>
+<br>
+
+<label>Checkbox</label>
+<input type="checkbox" name="checkbox-test">
+<label for="checkbox-test">Check me!</label>

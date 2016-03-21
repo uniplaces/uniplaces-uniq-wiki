@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Tables"
+date:   2016-03-18 07:21:01 +0000
+description: "Generic table styling."
+categories: "UI-Components"
+---
+<label for="">Table (default)</label>
+<table>
+  <thead>
+    <td>Name</td>
+    <td>Surname</td>
+    <td>Age</td>
+  </th>
+  <tbody>
+    <tr>
+      <td>Bruce</td>
+      <td>Wayne</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>Tony</td>
+      <td>Stark</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Clark</td>
+      <td>Kent</td>
+      <td>?</td>
+    </tr>
+  </tbody>
+</table>

@@ -59,10 +59,6 @@ body {
 .example {
   margin-bottom: $gutter;
   @include column(6);
-
-  & > .button+.button {
-    margin-top: $gutter;
-  }
 }
 
 [class^=col-] {
