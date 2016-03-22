@@ -8,16 +8,10 @@ Available states are: default (no class needed), success, error, warning and dis
 categories: "UI-Components"
 ---
 <label for="">Default</label>
-<div class="button" role="button">Click me!</div>
+<div class="button" role="button">Button</div>
 
-<label for="">Success</label>
-<div class="button button--success" role="button">Great Success!</div>
-
-<label for="">Error</label>
-<div class="button button--error" role="button">Oops :(</div>
-
-<label for="">Warning</label>
-<div class="button button--warning" role="button">Careful...</div>
+<label for="secondary">Secondary</label>
+<div class="button button--secondary" role="button">Button</div>
 
 <label for="">Disabled</label>
-<div class="button button--disabled" role="button">I don't even</div>
+<div class="button button--disabled" role="button">Button</div>
