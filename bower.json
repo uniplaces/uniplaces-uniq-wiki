@@ -1,0 +1,30 @@
+{
+  "name": "uniq-wiki",
+  "homepage": "https://github.com/uniplaces/uniplaces-uniq-wiki",
+  "authors": [
+    "Miguel Melo <miguel.melo@uniplaces.com>"
+  ],
+  "description": "Uniplaces CSS Framework/Toolkit Documentation",
+  "main": "",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "keywords": [
+    "css",
+    "framework",
+    "toolkit",
+    "documentation"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "uniq": "^0.0.0"
+  }
+}
