@@ -1,0 +1,54 @@
+@mixin button() {
+  position: relative;
+  display: inline-block;;
+  height: $gutter * 3;
+  line-height: $gutter * 3;
+  padding: 0 ($gutter * 2);
+  border-radius: 4px;
+  background-color: color('primary');
+  text-align: center;
+  vertical-align: middle;
+  color: color('primary', 'contrast');
+  @include button-text();
+
+  will-change: background-color;
+  transition: background-color $animation-duration $swiftOut;
+  @include backface-hack();
+
+  &:hover {
+    cursor: pointer;
+    background-color: color('primary', 'medium');
+  }
+
+  &--secondary {
+    background-color: color('primary', 'contrast');
+    color: color('primary', 'medium');
+    border: 2px solid color('primary', 'medium');
+
+    &:hover {
+      background-color: color('primary');
+      color: color('primary', 'contrast');
+      border: 2px solid color('primary');
+    }
+  }
+
+  &:active,
+  &--secondary:active {
+    background-color: color('primary', 'dark');
+    border-color: color('primary', 'dark');
+    color: color('primary', 'contrast');
+  }
+
+  &--disabled,
+  &--disabled:hover {
+    cursor: not-allowed;
+    background-color: color('gray', 'disabled_input');
+    border: 2px solid color('gray', 'disabled_light');
+    color: color('gray', 'input');
+  }
+
+  .loader {
+    float: right;
+    margin-top: $gutter / 2;
+  }
+}
