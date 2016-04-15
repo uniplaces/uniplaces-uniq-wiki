@@ -1,6 +1,7 @@
 @mixin button() {
   position: relative;
   display: inline-block;;
+  min-width: 120px;
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
@@ -24,6 +25,7 @@
     background-color: color('primary', 'contrast');
     color: color('primary', 'medium');
     border: 2px solid color('primary', 'medium');
+    line-height: 38px;
 
     &:hover {
       background-color: color('primary');
@@ -34,17 +36,18 @@
 
   &:active,
   &--secondary:active {
-    background-color: color('primary', 'dark');
-    border-color: color('primary', 'dark');
+    background-color: color('primary', 'active');
+    border-color: color('primary', 'active');
     color: color('primary', 'contrast');
   }
 
   &--disabled,
   &--disabled:hover {
     cursor: not-allowed;
+    line-height: 38px;
     background-color: color('gray', 'disabled_input');
     border: 2px solid color('gray', 'disabled_light');
-    color: color('gray', 'input');
+    color: color('gray', 'disabled_light');
   }
 
   .loader {

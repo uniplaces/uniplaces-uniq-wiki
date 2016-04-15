@@ -1,6 +1,6 @@
 {
   "name": "uniq",
-  "version": "0.0.5",
+  "version": "0.0.13",
   "description": "Internal CSS Framework/Toolkit used @ Uniplaces",
   "main": [
     "src/styles/**/*",
@@ -39,13 +39,13 @@
     "package.json",
     "Gruntfile.js"
   ],
-  "_release": "0.0.5",
+  "_release": "0.0.13",
   "_resolution": {
     "type": "version",
-    "tag": "v0.0.5",
-    "commit": "b7d50db5d5268521f653397c5e1dad039d77e663"
+    "tag": "v0.0.13",
+    "commit": "56507abbdc60c2c5cd4496fc20918be9ccd0066e"
   },
-  "_source": "git://github.com/uniplaces/uniplaces-uniq.git",
-  "_target": "^0.0.5",
+  "_source": "https://github.com/uniplaces/uniplaces-uniq.git",
+  "_target": "*",
   "_originalSource": "uniq"
 }

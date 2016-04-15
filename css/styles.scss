@@ -166,6 +166,10 @@ pre {
   @include tooltip();
 }
 
+.tooltip2 {
+  @include tooltip2();
+}
+
 .L1 .pln:first-child {
   display: none;
 }
