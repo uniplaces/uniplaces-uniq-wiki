@@ -16,7 +16,7 @@ $palette: (
     'dialog': #4e4e4e
   ),
   'error': (
-    'primary': #ef5b5b,// Burnt_Sienna
+    'primary': #ff7473,// Burnt_Sienna
     'light': #ffd5d5,// Cosmos
     'contrast': #1d2022// Shark
   ),
@@ -51,6 +51,45 @@ $palette: (
   ),
 );
 
+$palette2: (
+  'primary': (
+    'primary': #00adef, // Uniplaces_Blue,
+    'medium': #009fdb, // Pacific_Blue
+    'dark': #0076a3 // Allports
+  ),
+  'secondary': (
+    'primary': #66d5ff, // Malibu
+    'medium': #c8f0ff, // Onahau
+    'light': #dbf5ff // Pattens_Blue
+  ),
+  'gray': (
+    'primary': #1d2022, // Shark
+    'dark': #434343, // Tundora
+    'medium': #616161, // Dove Gray
+    'light': #888888, // Gray
+  ),
+  'medium-gray': (
+    'primary': #cccccc, // Silver
+    'medium': #e0e0e0, // ALto
+    'light': #eaeaea, // Gallery
+  ),
+  'light-gray': (
+    'primary': #f6f6f6, // Wildsand
+    'medium': #fafafa, // Alabaster
+    'light': #ffffffm // White
+  ),
+  'feedback': (
+    'primary': #2f96b8, // Boston_Blue
+    'light': #dceef5, // Link_Blue
+    'success': #7fcf98, // De_York
+    'light-success': #c1e7cd, // Fringy_Flower
+    'warning': #ffc952, // Golden_Tainoi
+    'light-warning': #ffe8b4, // Peach
+    'error': #ef5b5b, // Burst_Sienna
+    'light-error': #ffd5d5 // Cosmos
+  )
+);
+
 $primary-color-key: 'primary' !default;
 
 @function color($name: 'primary', $variant: $primary-color-key) {
@@ -69,6 +108,6 @@ $primary-color-key: 'primary' !default;
 $main-background-color: color('gray', 'light');
 
 $label-text-color: color('gray', 'input');
-$input-border-color: color('gray', 'border');
+$input-border-color: #e0e0e0;//color('gray', 'border'); - to be fixed
 $input-border-color-hover: color('primary', 'light');
 $button-hover-background-color: color('primary', 'light');

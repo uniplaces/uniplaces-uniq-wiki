@@ -1,11 +1,11 @@
-@mixin dropdown-arrow($color: color('gray', 'dark')) {
+@mixin dropdown-arrow($color: color('gray', 'dark'), $border: 2px) {
   &:before,
   &:after {
     content: " ";
     position: absolute;
     display: block;
-    width: 8px;
-    height: 2px;
+    width: 6px;
+    height: $border;
     top: 50%;
     right: 0;
     background-color: $color;
@@ -14,7 +14,7 @@
   }
   &:before {
     transform: rotate(45deg);
-    right: 5px;
+    right: 4px;
   }
   &:after {
     transform: rotate(-45deg);

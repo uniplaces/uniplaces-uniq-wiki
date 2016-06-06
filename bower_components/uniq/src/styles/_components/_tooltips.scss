@@ -20,6 +20,9 @@
       display: block;
       text-align: left;
     }
+    &:after {
+      display: table;
+    }
   }
 
   &:before,
@@ -36,8 +39,8 @@
     left: 64px;
     z-index: 3;
 
-    font-weight: bold;
     @include title();
+    font-weight: 500;
   }
 
   &:after {
