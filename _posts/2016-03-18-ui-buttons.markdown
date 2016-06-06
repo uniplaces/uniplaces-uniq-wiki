@@ -11,7 +11,7 @@ categories: "UI-Components"
 <div class="button button--primary" role="button">Button</div>
 
 <label for="secondary">Secondary</label>
-<div class="button button" role="button">Button</div>
+<div class="button" role="button">Button</div>
 
 <label for="">Disabled</label>
 <div class="button button--disabled" role="button">Button</div>

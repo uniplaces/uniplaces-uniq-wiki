@@ -5,9 +5,9 @@ date:   2016-03-18 07:21:01 +0000
 description: "Easily highlight new or unread items by adding 'badge' class and a data-count attribute to the desired element."
 categories: "UI-Components"
 ---
-<div class="button badge" data-count="27" role="button">I have a badge!</div>
-<div class="button badge" role="button">I have a badge!</div>
-<div class="button badge" data-count="235" role="button">I have a badge!</div>
+<div class="button button--primary badge" data-count="27" role="button">I have a badge!</div>
+<div class="button button--primary badge" role="button">I have a badge!</div>
+<div class="button button--primary badge" data-count="235" role="button">I have a badge!</div>
 
 <ul class="tabs">
   <li class="tabs__item tabs__item--active" role="button">Active Link</li>
