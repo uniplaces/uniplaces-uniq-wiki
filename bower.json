@@ -25,6 +25,6 @@
     "tests"
   ],
   "dependencies": {
-    "uniq": "0.0.15"
+    "uniq": "0.0.16"
   }
 }
