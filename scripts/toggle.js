@@ -4,7 +4,7 @@
 
 	toggle.on('click', function(event) {
 		event.preventDefault();
-		$(event.currentTarget).toggleClass(toggleClass)
+		$(event.currentTarget).toggleClass(toggleClass);
 	});
 
 })(document, window);
