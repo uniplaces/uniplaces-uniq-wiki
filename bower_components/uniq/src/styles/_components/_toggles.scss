@@ -1,0 +1,35 @@
+@mixin toggle() {
+  position: relative;
+  display: block;
+  width: 70px;
+  height: 30px;
+  border-radius: 6px;
+
+  background-color: color2('medium-gray', 'medium');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &:before {
+    content: "";
+    position: absolute;;
+    display: block;
+    width: 25px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+
+    will-change: left;
+    transition: left .3s ease;
+
+    background-color: color2('primary', 'contrast');
+    border-radius: 4px;
+  }
+
+  &--active {
+    background-color: color2('feedback', 'success');
+
+    &:before {
+      left: calc(100% - 5px);
+    }
+  }
+}
