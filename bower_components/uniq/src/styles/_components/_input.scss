@@ -8,13 +8,13 @@
     font-weight: 300 !important;
 
     &--success {
-      color: color('success', 'text');
+      color: color('feedback', 'success');
     }
     &--error {
-      color: color('error', 'text');
+      color: color('feedback', 'error');
     }
     &--warning {
-      color: color('warning', 'text');
+      color: color('feedback', 'warning');
     }
   }
 }
@@ -24,26 +24,30 @@
   display: inline-block;
   height: 40px;
   padding: 0 ($gutter / 2);
-  border: 2px solid $input-border-color;
-  border-radius: 2px;
+  border: 2px solid color2('medium-gray', 'medium');
+  border-radius: 4px;
   color: color('gray', 'input');
   font-size: 17px;
 
-  &:hover,
+  &:hover {
+    border: 2px solid color2('gray', 'light');
+    outline: 0;
+  }
+
   &:focus {
-    border: 2px solid $input-border-color-hover;
+    border: 2px solid color2('secondary');
     outline: 0;
   }
 
   &.validation {
     &--success {
-      border-color: color('success', 'primary');
+      border-color: color('feedback', 'success');
     }
     &--error {
-      border-color: color('error', 'primary');
+      border-color: color('feedback', 'error');
     }
     &--warning {
-      border-color: color('warning', 'primary');
+      border-color: color('feedback', 'warning');
     }
   }
 
@@ -127,154 +131,83 @@ label {
 	}
 }
 
-input[type="radio"] {
-	display: none;
+@mixin checkbox() {
+  position: relative;
+  display: none;
 
-	& + label {
-		position: relative;
-		display: block;
-		height: 32px;
-		cursor: pointer;
-		padding-left: 40px;
-		line-height: 32px;
-		color: $label-text-color;
-		white-space: nowrap;
-    	overflow: hidden;
-    	text-overflow: ellipsis;
+  & + label {
+    position: relative;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 40px;
 
-    	&:before {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				right: 0;
-				margin-right: 10px;
-				width: 32px;
-				height: 32px;
-				background-color: #fff;
-				border: 2px solid $input-border-color;
-				border-radius: 50%;
-			}
-	}
+    &:hover {
+      cursor: pointer;
 
-	&:checked {
+      &:before {
+        border-color: color('gray', 'light');
+      }
+    }
+  }
 
-		& + label {
+  & + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
 
-			&:before {
-				content: ' ';
-				display: inline-block;
-				position: absolute;
-				z-index: 1;
-				left: 0;
-				width: 32px;
-				height: 32px;
-				border-radius: 50%;
-				border: 2px solid color('primary');
-			}
+    background-color: color2('primary', 'contrast');
+    border: 2px solid color2('medium-gray', 'medium');
+    border-radius: 4px;
+  }
 
-			&:after {
-				content: ' ';
-				position: absolute;
-				z-index: 2;
-				left: 11px;
-				top: calc(50% - 5px);
-				width: 10px;
-				height: 10px;
-				border-radius: 50%;
-				background-color: color('primary');
-			}
-		}
-	}
+  &:checked + label {
+    position: relative;
 
-	&:disabled {
+    &:before {
+      border: 2px solid color2('secondary');
+      background-color: color2('secondary', 'light');
+    }
 
-		& + label {
-			color: color('gray', 'disabled');
-			cursor: not-allowed;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 15px;
+      top: 5px;
+      left: 5px;
+      background-image: url("../images/checked-checkbox.svg");
+      background-repeat: no-repeat;;
+      background-position: 50% 50%;
+      background-size: 15px 15px;
+    }
+  }
 
-			&:before {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				right: 0;
-				background-color: color('gray', 'disabled_input');
-				border: 2px solid $input-border-color;
-				border-radius: 50%;
-				width: 32px;
-				height: 32px;
-			}
-		}
-	}
+  &:invalid + label {
+    border-color: color2('feedback', 'error');
+  }
 }
 
-input[type="checkbox"] {
-	display: none;
+@mixin radio-button() {
+  @include checkbox();
 
-	& + label {
-		display: inline-block;
-		cursor: pointer;
-		padding-left: $gutter * 3;
-		line-height: 32px;
-		color: $label-text-color;
-		white-space: nowrap;
-  	overflow: hidden;
-  	text-overflow: ellipsis;
+  & + label {
+    &:before {
+      border-radius: 50%;
+    }
 
-  	&:before {
-			content: '';
-			display: inline-block;
-			position: absolute;
-			left: 0;
-			right: 0;
-			margin-right: $gutter;
-			width: 29px;
-			height: 29px;
-			background-color: #fff;
-			border: 2px solid $input-border-color;
-			border-radius: 4px;
-		}
-	}
+    &:after {
+      background-color: color2('primary');
+      border-radius: 50%;
+    }
+  }
 
-	&:checked {
-
-		& + label {
-
-			&:before {
-				content: ' ';
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				right: 0;
-				margin-right: 10px;
-				width: 32px;
-				height: 32px;
-				background: url('../images/checked-checkbox.svg') no-repeat 0 0;
-				border: none;
-			}
-		}
-	}
-
-	&:disabled {
-
-		& + label {
-			color: $input-border-color;
-			cursor: not-allowed;
-
-			&:before {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				right: 0;
-				margin-right: 10px;
-				width: 32px;
-				height: 32px;
-				background-color: color('gray', 'disabled_input');
-				border: 2px solid $input-border-color;
-				border-radius: 4px;
-			}
-		}
-	}
+  &:checked + label:after {
+    background-image: none;
+  }
 }

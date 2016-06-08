@@ -31,5 +31,17 @@ categories: "UI-Components"
 <br>
 
 <label>Checkbox</label>
-<input type="checkbox" name="checkbox-test">
-<label for="checkbox-test">Check me!</label>
+<input type="checkbox" name="checkbox-test" class="checkbox">
+<label for="checkbox-test">Unchecked</label>
+
+<label>Checkbox</label>
+<input type="checkbox" name="checkbox-test2" class="checkbox" checked>
+<label for="checkbox-test2">Checked</label>
+
+<label>Radio Button</label>
+<input type="radio" name="radio-test" class="radio-button">
+<label for="radio-test">Radio Button</label>
+
+<label>Radio Button</label>
+<input type="radio" name="radio-test2" class="radio-button" checked>
+<label for="radio-test2">Radio Button Checked</label>

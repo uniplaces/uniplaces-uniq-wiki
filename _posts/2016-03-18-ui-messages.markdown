@@ -7,23 +7,45 @@ categories: "UI-Components"
 ---
 <div class="alert alert--success">
   <div class="alert__title">Success message example.</div>
-  Lorem ipsum dolor <a href="#">sit amet</a>, consectetur adipisicing elit.
+  <div class="alert__message">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </div>
+</div>
+
+<div class="alert alert--success">
+  <div class="alert__title">Success message example.</div>
 </div>
 
 <div class="alert alert--warning">
   <div class="alert__title">Warning message example.</div>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-  <div class="alert__close" aria-label="Close" role="button">+</div>
+  <div class="alert__message">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </div>
+</div>
+
+<div class="alert alert--warning">
+  <div class="alert__title">Warning message example.</div>
 </div>
 
 <div class="alert alert--error">
   <div class="alert__title">Error message example.</div>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <div class="alert__message">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </div>
+</div>
+
+<div class="alert alert--error">
+  <div class="alert__title">Error message example.</div>
+</div>
+
+<div class="alert" role="dialog">
+  <div class="alert__title">Neutral/informational message example.</div>
+  <div class="alert__message">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </div>
   <div class="alert__close" aria-label="Close" role="button">+</div>
 </div>
 
 <div class="alert" role="dialog">
   <div class="alert__title">Neutral/informational message example.</div>
-  Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.
-  <div class="alert__close" aria-label="Close" role="button">+</div>
 </div>

@@ -174,4 +174,51 @@ pre {
   display: none;
 }
 
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-button {
+  @include newdropdown-button();
+  @include dropdown-arrow();
+
+  &:before {
+    right: 20px;
+  }
+  &:after {
+    right: 16px;
+  }
+}
+
+.dropdown {
+  @include newdropdown();
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  z-index: 2;
+}
+
+.checkbox {
+  @include checkbox();
+}
+
+.radio-button {
+  @include radio-button();
+}
+
+.label {
+  @include label();
+  display: table;
+}
+
+.toggle {
+  @include toggle();
+}
+
+.modal__body {
+  @include column(6);
+  padding: 0;
+}
+
 /** /Demo Styles */
