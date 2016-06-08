@@ -7,10 +7,10 @@ categories: "UI-Components"
 ---
 <label for="pagination">Pagination</label>
 <ul class="pagination">
-  <li class="pagination__item">
+  <li class="pagination__item pagination__item--disabled">
     <a href="#">&lt;</a>
   </li>
-  <li class="pagination__item">
+  <li class="pagination__item pagination__item--selected">
     <a href="#">1</a>
   </li>
   <li class="pagination__item">
@@ -18,6 +18,12 @@ categories: "UI-Components"
   </li>
   <li class="pagination__item">
     <a href="#">3</a>
+  </li>
+  <li class="pagination__item">
+    <a href="#">...</a>
+  </li>
+  <li class="pagination__item">
+    <a href="#">9</a>
   </li>
   <li class="pagination__item">
     <a href="#">&gt;</a>
@@ -26,10 +32,10 @@ categories: "UI-Components"
 
 <label for="pagination">Pagination</label>
 <ul class="pagination">
-  <li class="pagination__item">
-    <a href="#"><</a>
+  <li class="pagination__item pagination__item--disabled">
+    <a href="#">&lt;</a>
   </li>
-  <li class="pagination__item">
+  <li class="pagination__item pagination__item--selected">
     <a href="#">1</a>
   </li>
   <li class="pagination__item">
@@ -39,15 +45,12 @@ categories: "UI-Components"
     <a href="#">3</a>
   </li>
   <li class="pagination__item">
-    <a href="#">4</a>
+    <a href="#">...</a>
   </li>
   <li class="pagination__item">
-    <a href="#">6</a>
+    <a href="#">9</a>
   </li>
   <li class="pagination__item">
-    <a href="#">6</a>
-  </li>
-  <li class="pagination__item">
-    <a href="#">></a>
+    <a href="#">&gt;</a>
   </li>
 </ul>

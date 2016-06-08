@@ -8,23 +8,23 @@ categories: "UI-Components"
 ---
 <label for="">Tabs (default)</label>
 <ul class="tabs">
-  <li class="tabs__item tabs__item--active" role="button">Active Link</li>
-  <li class="tabs__item" role="button">Default Link</li>
-  <li class="tabs__item" role="button">Default Link</li>
+  <li class="tabs__item tabs__item--active" role="button">Tab #1</li>
+  <li class="tabs__item" role="button">Tab #2</li>
+  <li class="tabs__item" role="button">Tab #2</li>
 </ul>
 <br>
 
 <label for="">Tabs (.tabs--center)</label>
 <ul class="tabs tabs--center">
-  <li class="tabs__item" role="button">Default Link</li>
-  <li class="tabs__item" role="button">Default Link</li>
-  <li class="tabs__item" role="button">Default Link</li>
+  <li class="tabs__item" role="button">Tab #1</li>
+  <li class="tabs__item" role="button">Tab #2</li>
+  <li class="tabs__item" role="button">Tab #3</li>
 </ul>
 <br>
 
 <label for="">Tabs (.tabs--end)</label>
 <ul class="tabs tabs--end">
-  <li class="tabs__item" role="button">Default Link</li>
-  <li class="tabs__item" role="button">Default Link</li>
-  <li class="tabs__item" role="button">Default Link</li>
+  <li class="tabs__item" role="button">Tab #1</li>
+  <li class="tabs__item" role="button">Tab #2</li>
+  <li class="tabs__item" role="button">Tab #3</li>
 </ul>

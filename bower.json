@@ -25,6 +25,6 @@
     "tests"
   ],
   "dependencies": {
-    "uniq": "0.0.32"
+    "uniq": "7b4c2fa0b29ca591dc81759bf7a74585783ea1ff"
   }
 }

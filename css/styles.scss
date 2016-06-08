@@ -216,4 +216,9 @@ pre {
   @include toggle();
 }
 
+.modal__body {
+  @include column(6);
+  padding: 0;
+}
+
 /** /Demo Styles */
