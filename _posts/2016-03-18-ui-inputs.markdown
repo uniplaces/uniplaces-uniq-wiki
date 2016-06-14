@@ -11,22 +11,22 @@ categories: "UI-Components"
 <input type="text" name="demo" placeholder="Placeholder Text">
 <br>
 
-<label for="error">Input Label</label>
+<label for="error">Input Label (error)</label>
 <input type="text" name="error" placeholder="Placeholder Text" class="validation--error">
 <label for="error" class="validation validation--error">This is an error message.</label>
 <br>
 
-<label for="success">Input Label</label>
+<label for="success">Input Label (success)</label>
 <input type="text" name="success" placeholder="Placeholder Text" class="validation--success">
 <label for="success" class="validation validation--success">This is a success message.</label>
 <br>
 
-<label for="warning">Input Label</label>
+<label for="warning">Input Label (warning)</label>
 <input type="text" name="warning" placeholder="Placeholder Text" class="validation--warning">
 <label for="warning" class="validation validation--warning">This is a warning message.</label>
 <br>
 
-<label for="disabled">Input Label</label>
+<label for="disabled">Input Label (disabled)</label>
 <input type="text" name="disabled" placeholder="Placeholder Text" disabled>
 <br>
 
@@ -34,14 +34,23 @@ categories: "UI-Components"
 <input type="checkbox" name="checkbox-test" class="checkbox">
 <label for="checkbox-test">Unchecked</label>
 
-<label>Checkbox</label>
+<label>Checkbox (checked)</label>
 <input type="checkbox" name="checkbox-test2" class="checkbox" checked>
 <label for="checkbox-test2">Checked</label>
+
+<label>Checkbox (invalid)</label>
+<input type="checkbox" name="checkbox-test2" class="checkbox" invalid>
+<label for="checkbox-test2">Unchecked error</label>
+<label for= "" class="validation validation--error">This is an error message.</label>
 
 <label>Radio Button</label>
 <input type="radio" name="radio-test" class="radio-button">
 <label for="radio-test">Radio Button</label>
 
-<label>Radio Button</label>
+<label>Radio Button (checked)</label>
 <input type="radio" name="radio-test2" class="radio-button" checked>
 <label for="radio-test2">Radio Button Checked</label>
+
+<label>Radio Button (invalid)</label>
+<input type="radio" name="radio-test" class="radio-button" invalid>
+<label for="radio-test">Radio Button Error</label>

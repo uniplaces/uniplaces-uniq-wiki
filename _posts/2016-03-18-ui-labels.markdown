@@ -5,14 +5,14 @@ date:   2016-03-18 07:21:01 +0000
 description: "Labels - Primary, warning, pending and success/done"
 categories: "UI-Components"
 ---
-<label for="">Primary</label>
+<label for="">Label (primary)</label>
 <div class="label">Primary Label</div>
 
-<label for="">Warning</label>
+<label for="">Label (warning)</label>
 <div class="label label--warning">Warning Label</div>
 
-<label for="">Pending</label>
+<label for="">Label (pending)</label>
 <div class="label label--pending">Pending Label</div>
 
-<label for="">Success / Done</label>
+<label for="">Label (success/done)</label>
 <div class="label label--success">Success Label</div>
