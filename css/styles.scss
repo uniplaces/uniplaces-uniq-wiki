@@ -160,6 +160,8 @@ pre {
 
 .tabs {
   @include tabs();
+  margin-top: 46px;
+  margin-bottom: 40px;
 }
 
 .tooltip {
@@ -212,6 +214,50 @@ pre {
   display: table;
 }
 
+label,
+.input-label {
+  @include form-label();
+}
+
+label {
+  margin-top: 40px;
+
+  &.validation {
+    margin: 0;
+
+    &--success {
+      color: color2('feedback', 'success');
+    }
+    &--warning {
+      color: color2('feedback', 'warning');
+    }
+    &--error {
+      color: color2('feedback', 'error');
+    }
+  }
+}
+
+input {
+  &.validation {
+    &--success {
+      border-color: color2('feedback', 'success');
+    }
+    &--warning {
+      border-color: color2('feedback', 'warning');
+    }
+    &--error {
+      border-color: color2('feedback', 'error');
+    }
+
+    &:focus,
+    &--success:focus,
+    &--warning:focus,
+    &--error:focus {
+      border-color: color2('primary');
+    }
+  }
+}
+
 .toggle {
   @include toggle();
 }
@@ -219,6 +265,28 @@ pre {
 .modal__body {
   @include column(6);
   padding: 0;
+}
+
+.main-title {
+  @include main-heading();
+}
+
+.subsection-title {
+  @include subsection-title();
+}
+
+.subsection-heading {
+  @include section-heading();
+}
+
+.paragraph {
+  &--spaced {
+    margin: 16px 0;
+  }
+}
+
+.toast__body {
+  padding: 24px 32px;
 }
 
 /** /Demo Styles */

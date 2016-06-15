@@ -38,12 +38,12 @@
     "package.json",
     "Gruntfile.js"
   ],
-  "_release": "7b4c2fa0b2",
+  "_release": "a188e383f7",
   "_resolution": {
     "type": "commit",
-    "commit": "7b4c2fa0b29ca591dc81759bf7a74585783ea1ff"
+    "commit": "a188e383f78e616e53f75eb97e98a8fbfdcb7174"
   },
   "_source": "https://github.com/uniplaces/uniplaces-uniq.git",
-  "_target": "7b4c2fa0b29ca591dc81759bf7a74585783ea1ff",
+  "_target": "a188e383f78e616e53f75eb97e98a8fbfdcb7174",
   "_originalSource": "uniq"
 }
