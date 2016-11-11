@@ -1,3 +1,6 @@
 .info-box {
     @include info-box();
+    @include breakpoint(small) {
+        display: block;
+    }
 }

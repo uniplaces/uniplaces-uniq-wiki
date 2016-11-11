@@ -41,20 +41,6 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: $base-font-size;
 }
-.header,
-.main,
-.footer {
-    position: relative !important;
-    @include column(12);
-    &__wrapper {
-        @include flex();
-        @include space-between();
-        position: relative;
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-}
 
 
 ::selection {

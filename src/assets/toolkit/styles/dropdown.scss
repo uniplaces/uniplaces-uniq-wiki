@@ -1,0 +1,21 @@
+.dropdown {
+    @include dropdown();
+    @include column(6);
+    border-radius: 2px;
+
+    &-button {
+        @include flex();
+        @include align-items-center();
+        padding-left: 16px;
+        height: $input-height;
+    }
+
+    &__wrapper {
+        @include breakpoint(small) {
+            display: none;
+        }
+        width: 100%;
+    }
+
+}
+
