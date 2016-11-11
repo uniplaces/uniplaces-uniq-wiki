@@ -46,7 +46,23 @@
     }
 }
 
+.dropdown-wrapper {
+    height: 56px;
+}
+
 .dropdown {
     @include dropdown();
+    @include column(6);
+    border-radius: 2px;
+
+    &-button {
+        @include flex();
+        @include align-items-center();
+        padding-left: 16px;
+    }
+
+    &__wrapper {
+        width: 100%;
+    }
 }
 

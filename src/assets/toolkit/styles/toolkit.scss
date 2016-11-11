@@ -7,19 +7,21 @@
 @import 'grid';
 @import 'typography';
 
+
 // Components
+@import 'input';
 @import 'animation';
 @import 'header';
 @import 'alert';
 @import 'footer';
 @import 'checkbox';
-@import 'input';
 @import 'toggle';
 @import 'buttons';
 @import 'info-box';
 @import 'messages';
 @import 'progress-bar';
 @import 'step-card';
+@import 'dropdown';
 
 .uniplaces-logo {
     height: 100px;
@@ -73,9 +75,5 @@ body {
 .image-gallery {
     @include image-gallery();
     margin-bottom: 46px;
-}
-
-.f-item-preview {
-    overflow: hidden;
 }
 

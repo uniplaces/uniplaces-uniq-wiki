@@ -1,1 +1,18 @@
+<div class="dropdown-wrapper">
+    <div class="dropdown">
+        <div class="dropdown-button">
+            What are you? 
+        </div>
+        <div class="dropdown__wrapper">
+            <div class="dropdown__item">Student</div>
+            <div class="dropdown__item">Full-time worker</div>
+            <div class="dropdown__item">Tourist</div>
+        </div>
+    </div>
+</div>
 
+<script async>
+  $('.dropdown-button').on('click', function () {
+    $(this).toggleClass('dropdown-button--active');
+  });
+</script>
