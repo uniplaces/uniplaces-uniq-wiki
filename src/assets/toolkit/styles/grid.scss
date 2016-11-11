@@ -1,0 +1,27 @@
+.row {
+    position: relative;
+    @include row();
+}
+
+.col {
+    @include flex();
+    @include align-items-center();
+    @include justify-content-center();
+    border: 2px solid color('borders', 'primary');
+    height: 40px;
+    
+    &--centered {
+        text-align: center;
+    }
+    
+    $columns : (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+    @each $num in $columns {
+        &--#{$num} {
+            @include column($num)
+        }
+    }
+
+    &--full-width {
+        @include limited-full-width();
+    }
+}

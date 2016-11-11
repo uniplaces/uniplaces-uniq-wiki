@@ -1,0 +1,54 @@
+$max-width: 1000px;
+$max-columns: 12;
+
+@mixin limited-full-width() {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@mixin row() {
+    @include flex();
+    @include flex-row();
+    @include flex-wrap();
+    @include limited-full-width();
+    flex: 0 0 auto;
+    
+    &--reverse {
+        @include flex-row-reverse();
+    }
+    
+    &--column-reverse {
+        @include flex-column-reverse();
+    }
+}
+
+@mixin col() {
+    position: relative;
+    @include flex-grow(0);
+    max-width: 100%;
+}
+
+@mixin column($count, $total-columns:$max-columns) {
+    @include col();
+    @include flex-basis($count * 100% / $total-columns);
+    width: $count * 100% / $total-columns;
+
+    @include breakpoint(small) {
+        @include flex-grow(1);
+        @include flex-basis(100%);
+        width: 100%;
+    }
+}
+
+@mixin clearfix() {
+    &,
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+        overflow: auto;
+        float: none;
+    }
+}

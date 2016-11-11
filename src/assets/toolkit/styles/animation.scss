@@ -1,0 +1,34 @@
+
+.animation-wrapper {
+    padding: 16px;
+}
+
+.animation {
+    &--fade-in {
+        opacity: 0;
+        &:hover {
+            @include fade-in();
+        }
+    }
+
+    &--fade-out {
+        &:hover {
+            @include fade-out();
+        }
+    }
+
+    &--slide-in {
+        transform: translate3d(50%,0 ,0);
+        &:hover {
+            @include slide-in();
+        }
+    }
+
+    &--scale-in {
+        transform: scale3d(0.5, 0.5, 0.5);
+        &:hover {
+            @include scale-in();
+        }
+    }
+}
+

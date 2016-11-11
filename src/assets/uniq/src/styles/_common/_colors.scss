@@ -1,0 +1,78 @@
+// Color Pallette
+$palette: (
+  'primary': (
+    'primary': #00adef,
+    'light': #3b9eff,
+    'translucent': rgba(157, 206, 255, 0.25),
+    'divider': #9dceff,
+    'disabled': #888
+  ),
+  'buttons': (
+    'primary': #fff,
+    'hover': #ecf5ff,
+    'alternative': #44c482
+  ),
+  'text': (
+    'primary': #575757,
+    'subheading': #434343,
+    'title': #303030,
+    'subtitle': #888,
+    'body': #575757,
+    'highlight': #fff,
+    'input': #888,
+    'modal': #6b6b6b
+  ),
+  'anchor' : (
+    'negative' : #fff,
+    'alternative' : #616161
+  ),
+  'borders': (
+    'primary': #d1d5da,
+    'light': #f0f0f0,
+    'gallery-item': #bcbcbc
+  ),
+  'background': (
+    'primary': #fff,
+    'secondary': rgba(250, 250, 250, 0.55),
+    'light': #f0f0f0,
+    'modal': #fafafa,
+    'gallery-item': #f0f0f0,
+    'translucent': rgba(0,0,0,0.35),
+    'hover': #E6F8FD
+  ),
+  'input': (
+    'primary': #3b9eff,
+    'disabled': #888,
+    'border': #d1d5da,
+    'focus': #ecf5ff,
+    'mobile-border': #d6d6d6
+  ),
+  'feedback': (
+    'success': #9bdfb8,
+    'warning': #fff2b6,
+    'error': #ff3a2d,
+    'info': #148aff,
+    'text': #224251
+  ),
+  'pill': (
+    'success': #44c482,
+    'warning': #ffb104,
+    'error': #ff6b6b,
+    'info': #00adef,
+    'text': #fff
+  )
+);
+
+$primary-color-key: 'primary' !default;
+
+@function color($name: 'primary', $variant: $primary-color-key) {
+  $color: null;
+  // Get the color spectrum
+  $color-spectrum: map-get($palette, $name);
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  @return $color;
+}

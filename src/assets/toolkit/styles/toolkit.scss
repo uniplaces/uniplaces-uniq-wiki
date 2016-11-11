@@ -1,0 +1,81 @@
+
+// uniQ library
+@import '../../uniq/src/styles/_main';
+
+// Common
+@import 'colors';
+@import 'grid';
+@import 'typography';
+
+// Components
+@import 'animation';
+@import 'header';
+@import 'alert';
+@import 'footer';
+@import 'checkbox';
+@import 'input';
+@import 'toggle';
+@import 'buttons';
+@import 'info-box';
+@import 'messages';
+@import 'progress-bar';
+@import 'step-card';
+
+.uniplaces-logo {
+    height: 100px;
+    max-width: 300px;
+    background-repeat: no-repeat;
+    background-image: url(https://d1mivx2mj8sr2d.cloudfront.net/dist/07a40884bec18d1ec5e119ad93b47f08f5affaef/img/uniplaces_logo.svg);
+}
+
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    @include body();
+    font-family: 'Roboto', sans-serif;
+    font-size: $base-font-size;
+}
+.header,
+.main,
+.footer {
+    position: relative !important;
+    @include column(12);
+    &__wrapper {
+        @include flex();
+        @include space-between();
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+
+::selection {
+    background-color: color('text', 'highlight');
+
+    color: color('primary');
+}
+
+.modal {
+    @include modal();
+
+    &__wrapper {
+        @include column(6);
+    }
+}
+
+
+.image-gallery {
+    @include image-gallery();
+    margin-bottom: 46px;
+}
+
+.f-item-preview {
+    overflow: hidden;
+}
+

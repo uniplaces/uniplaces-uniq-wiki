@@ -1,0 +1,27 @@
+.color-container {
+    display: flex;
+    margin: 16px 0;
+}
+
+.color {
+    @include align-items-center();
+    @include justify-content-center();
+    flex-grow: 1;
+    margin: 4px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+    @each $arrayName, $colorArray in $palette {
+        @each $colorName, $color in $colorArray {
+            &--#{$arrayName}-#{$colorName} {
+                background: $color;
+            }
+        }
+    }
+}
+

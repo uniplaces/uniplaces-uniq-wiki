@@ -1,0 +1,76 @@
+@mixin button() {
+    @include button-text();
+    @include height-modifiers();
+    @include align-items-center();
+    @include justify-content-center();
+    @include flex();
+    width: 100%;
+    min-width: 130px;
+    height: 44px;
+    padding: 0 22px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    text-align: left;
+    color: color('primary');
+    will-change: background-color;
+    
+    @include breakpoint(small) {
+        text-align: center;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &--primary {
+        text-align: center;
+        background-color: color('primary');
+        color: color('text', 'highlight');
+    }
+
+    &--secondary {
+        text-align: center;
+        border: 2px solid color('primary');
+    }
+
+    &--alternative {
+        text-align: center;
+        background-color: color('buttons', 'alternative');
+        color: color('text', 'highlight');
+    }
+
+    &--align-right {
+        text-align: right;
+        padding-right: 0;
+    }
+
+    &--align-left {
+        text-align: left;
+        padding-left: 0;
+    }
+    
+    &--disabled {
+        text-align: center;
+        background-color: color('primary', 'disabled');
+        color: color('text', 'highlight');
+        
+        @include breakpoint(small) {
+            background-color: transparent;
+            color: color('text', 'disabled');
+        }
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--cool {
+        width: auto;
+    }
+
+    &--s {
+        font-size: em(16px);
+    }
+}

@@ -1,0 +1,21 @@
+html, 
+body {
+    font-family: 'Open Sans', sans-serif;
+    @include body();
+}
+
+h1 {
+    @include heading();
+    padding: 16px 0;
+}
+
+// Fabrikator customizations
+
+.f-control-bar {
+    padding-bottom: 32px;
+}
+
+.f-item-heading {
+    @include title();
+    padding: 16px 0;
+}
