@@ -58,10 +58,8 @@ const config = {
   dest: 'dist',
 };
 
-
 // clean
 gulp.task('clean', del.bind(null, [config.dest]));
-
 
 // styles
 gulp.task('styles:fabricator', () => {
@@ -91,7 +89,6 @@ gulp.task('styles:toolkit', () => {
 
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
-
 // scripts
 const webpackConfig = require('./webpack.config')(config);
 
@@ -110,7 +107,6 @@ gulp.task('scripts', (done) => {
   });
 });
 
-
 // images
 gulp.task('images', ['favicon'], () => {
   return gulp.src(config.images.toolkit.src)
@@ -123,7 +119,6 @@ gulp.task('favicon', () => {
   .pipe(gulp.dest(config.dest));
 });
 
-
 // assembler
 gulp.task('assembler', (done) => {
   assembler({
@@ -132,7 +127,6 @@ gulp.task('assembler', (done) => {
   });
   done();
 });
-
 
 // server
 gulp.task('serve', () => {
@@ -158,7 +152,6 @@ gulp.task('serve', () => {
   gulp.watch(config.images.toolkit.watch, ['images:watch']);
 
 });
-
 
 // default build task
 gulp.task('default', ['clean'], () => {

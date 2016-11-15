@@ -1,4 +1,3 @@
-
 .input-container {
     @include input-container();
     @include column(6);
@@ -45,5 +44,3 @@
         margin-bottom: 46px;
     }
 }
-
-
