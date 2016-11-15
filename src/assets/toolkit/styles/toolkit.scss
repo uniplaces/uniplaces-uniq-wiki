@@ -7,7 +7,6 @@
 @import 'grid';
 @import 'typography';
 
-
 // Components
 @import 'input';
 @import 'animation';
@@ -42,24 +41,9 @@ body {
     font-size: $base-font-size;
 }
 
-
 ::selection {
     background-color: color('text', 'highlight');
-
     color: color('primary');
 }
 
-.modal {
-    @include modal();
-
-    &__wrapper {
-        @include column(6);
-    }
-}
-
-
-.image-gallery {
-    @include image-gallery();
-    margin-bottom: 46px;
-}
 

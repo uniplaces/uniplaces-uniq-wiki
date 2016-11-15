@@ -33,11 +33,13 @@ a {
 
 h1 {
     @include title();
+    padding: 15px 0;
 }
 
 h2 {
     @include title();
     color: color('primary');
+    padding: 10px 0;
 }
 
 .subheading {
