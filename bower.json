@@ -20,7 +20,6 @@
     "library"
   ],
   "homepage": "https://github.com/uniplaces/uniplaces-uniq-wiki",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
