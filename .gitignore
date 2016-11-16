@@ -1,3 +1,5 @@
-_site
-.sass-cache
-.jekyll-metadata
+node_modules/
+dist
+src/assets/uniq
+.DS_Store
+

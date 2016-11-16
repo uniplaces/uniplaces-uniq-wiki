@@ -1,3 +1,4 @@
+
 {
   "name": "uniq-wiki",
   "homepage": "https://github.com/uniplaces/uniplaces-uniq-wiki",
@@ -6,17 +7,19 @@
   ],
   "description": "Uniplaces CSS Framework/Toolkit Documentation",
   "main": "",
-  "moduleType": [
-    "es6",
-    "globals"
-  ],
-  "keywords": [
-    "css",
-    "framework",
-    "toolkit",
-    "documentation"
+  "authors": [
+    "Luke Askew"
   ],
   "license": "MIT",
+  "keywords": [
+    "toolkit",
+    "styleguide",
+    "framework",
+    "scaffold",
+    "patterns",
+    "library"
+  ],
+  "homepage": "https://github.com/uniplaces/uniplaces-uniq-wiki",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -25,6 +28,6 @@
     "tests"
   ],
   "dependencies": {
-    "uniq": "a188e383f78e616e53f75eb97e98a8fbfdcb7174"
+    "uniq": "^2.0.11"
   }
 }
