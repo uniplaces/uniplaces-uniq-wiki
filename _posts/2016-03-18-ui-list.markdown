@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "List"
+date:   2016-03-18 07:21:01 +0000
+description: "List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content."
+categories: "UI-Components"
+---
+<ul class="list">
+  <li class="list__item">Lorem ipsum</li>
+  <li class="list__item">Dolor sit amet</li>
+  <li class="list__item">don't read this</li>
+  <li class="list__item">if you can read this, you can read.</li>
+</ul>

@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Badges"
+date:   2016-03-18 07:21:01 +0000
+description: "Easily highlight new or unread items by adding 'badge' class and a data-count attribute to the desired element."
+categories: "UI-Components"
+---
+<ul class="tabs">
+  <li class="tabs__item tabs__item--active" role="button">Tab #1</li>
+  <li class="tabs__item badge" data-count="2" role="button">Tab #2</li>
+  <li class="tabs__item" role="button">Tab #3</li>
+</ul>
