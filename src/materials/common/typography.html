@@ -3,14 +3,17 @@ notes: |
     Usage:
     ```
     .typography {
-        &--heading {
-            @include heading();
+        &--display {
+            @include display();
         }
-        &--subheading {
-            @include subheading();
+        &--headline {
+            @include headline();
         }
         &--title {
             @include title();
+        }
+        &--subheader {
+            @include subheader();
         }
         &--subtitle {
             @include subtitle();
@@ -18,8 +21,12 @@ notes: |
         &--body {
             @include body();
         }
-        &--button-text {
-            @include button-text();
+        &--caption {
+            @include caption();
+            text-align: left;
+        }
+        &--small {
+            @include small();
         }
         &--anchor {
             @include anchor();
@@ -28,13 +35,16 @@ notes: |
     ```
 ---
 
-<div class="typography typography--heading">
+<div class="typography typography--display">
+    uniQ - Uniplaces Internal CSS Framework/Toolkit
+</div>
+<div class="typography typography--headline">
     uniQ - Uniplaces Internal CSS Framework/Toolkit
 </div>
 <div class="typography typography--title">
     uniQ - Uniplaces Internal CSS Framework/Toolkit
 </div>
-<div class="typography typography--subheading">
+<div class="typography typography--subheader">
     uniQ - Uniplaces Internal CSS Framework/Toolkit
 </div>
 <div class="typography typography--subtitle">
@@ -43,7 +53,10 @@ notes: |
 <div class="typography typography--body">
     uniQ - Uniplaces Internal CSS Framework/Toolkit
 </div>
-<div class="typography typography--button-text">
+<div class="typography typography--caption">
+    uniQ - Uniplaces Internal CSS Framework/Toolkit
+</div>
+<div class="typography typography--small">
     uniQ - Uniplaces Internal CSS Framework/Toolkit
 </div>
 <div class="typography typography--anchor">
