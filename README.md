@@ -5,12 +5,6 @@
 Visual Guide:
   - [http://uniplaces.github.io/uniplaces-uniq-wiki/](http://uniplaces.github.io/uniplaces-uniq-wiki/)
 
-## Running it
-
-```
-    npm start
-```
-
 ## Table of Contents
 
   1. [Terminology](#terminology)

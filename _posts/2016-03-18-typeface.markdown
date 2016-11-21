@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Typeface"
+date:   2016-03-18 09:21:01 +0000
+description: "Museo Sans Rounded has been chosen as it provides an elegant yet readable typeface for both headlines and body text."
+categories: Typography
+---
+<h4>Lorem Ipsum dolor</h4>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+  molestias officiis, est voluptatibus. Dignissimos non,
+  eos. Magni explicabo odit quidem quod nostrum non laborum! Obcaecati,
+  aperiam, necessitatibus. Animi, reiciendis, officiis?
+</p>
