@@ -28,6 +28,6 @@
     "tests"
   ],
   "dependencies": {
-    "uniq": "^2.0.11"
+    "uniq": "2.0.18"
   }
 }

@@ -1,15 +1,18 @@
 .typography {
     padding: 10px 0;
-    &--heading {
-        @include heading();
+    &--display {
+        @include display();
     }
-    &--subheading {
-        @include subheading();
+    &--headline {
+        @include headline();
     }
     &--title {
         @include title();
         margin-top: 46px;
         margin-bottom: 20px;
+    }
+    &--subheader {
+        @include subheader();
     }
     &--subtitle {
         @include subtitle();
@@ -17,9 +20,12 @@
     &--body {
         @include body();
     }
-    &--button-text {
-        @include button-text();
+    &--caption {
+        @include caption();
         text-align: left;
+    }
+    &--small {
+        @include small();
     }
     &--anchor {
         @include anchor();
@@ -42,7 +48,7 @@ h2 {
 }
 
 .subheading {
-    @include subheading();
+    @include subheader();
     padding: 8px 0;
     margin-bottom: 8px;
 
