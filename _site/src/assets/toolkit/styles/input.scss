@@ -1,0 +1,46 @@
+.input-container {
+    @include input-container();
+    @include column(6);
+}
+
+.input {
+    @include input();
+}
+
+.input-button {
+    @include input-button();
+}
+
+.input-right-icon {
+    @include input-right-icon();
+}
+
+.mobile-number {
+    @include mobile-number();
+    margin-bottom: 64px;
+}
+
+.input-price {
+    @include input-price();
+    @include column(5);
+    margin-bottom: 64px;
+    margin-left: 0;
+    margin-right: auto;
+
+    @include breakpoint(small) {
+        margin-bottom: 64px;
+    }
+}
+
+.radio-button {
+    @include radio-button();
+}
+
+.textarea {
+    @include textarea();
+    width: 100%;
+    
+    &-counter {
+        margin-bottom: 46px;
+    }
+}

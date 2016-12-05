@@ -1,0 +1,10 @@
+.buttons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button {
+    @include button();
+    margin: 5px;
+    max-width: 200px;
+}
