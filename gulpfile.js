@@ -21,12 +21,12 @@ const config = {
     browsers: 'last 1 version',
     fabricator: {
       src: 'src/assets/fabricator/styles/fabricator.scss',
-      dest: '_site/assets/fabricator/styles',
+      dest: './assets/fabricator/styles',
       watch: 'src/assets/fabricator/styles/**/*.scss',
     },
     toolkit: {
       src: 'src/assets/toolkit/styles/toolkit.scss',
-      dest: '_site/assets/toolkit/styles',
+      dest: './assets/toolkit/styles',
       watch: 'src/assets/toolkit/styles/**/*.scss',
     },
     uniq: {
@@ -36,26 +36,26 @@ const config = {
   scripts: {
     fabricator: {
       src: './src/assets/fabricator/scripts/fabricator.js',
-      dest: '_site/assets/fabricator/scripts',
+      dest: './assets/fabricator/scripts',
       watch: 'src/assets/fabricator/scripts/**/*',
     },
     toolkit: {
       src: './src/assets/toolkit/scripts/toolkit.js',
-      dest: '_site/assets/toolkit/scripts',
+      dest: './assets/toolkit/scripts',
       watch: 'src/assets/toolkit/scripts/**/*',
     },
   },
   images: {
     toolkit: {
       src: ['src/assets/toolkit/images/**/*', 'src/favicon.ico'],
-      dest: '_site/assets/toolkit/images',
+      dest: './assets/toolkit/images',
       watch: 'src/assets/toolkit/images/**/*',
     },
   },
   templates: {
     watch: 'src/**/*.{html,md,json,yml}',
   },
-  dest: '_site',
+  dest: '.',
 };
 
 // clean
@@ -154,7 +154,7 @@ gulp.task('serve', () => {
 });
 
 // default build task
-gulp.task('default', ['clean'], () => {
+gulp.task('default', [], () => {
 
   // define build tasks
   const tasks = [

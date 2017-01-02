@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+
+	<link rel="stylesheet" href="/assets/fabricator/styles/f.css">
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="/assets/toolkit/styles/toolkit.css">
+	<!-- /toolkit styles -->
+
+        <script src="http://zeptojs.com/zepto.min.js"></script>
+
+</head>
+<body>
+
+		<!-- fabricator icons -->
+		<svg style="display: none;">
+			<symbol id="f-icon-code" viewBox="0 0 512 512">
+				<path d="M377.3 121.3l-40.5 40.4 94.4 94.3-94.4 94.3 40.5 40.4L512 256zM134.7 121.3L0 256l134.7 134.7 40.5-40.4L80.8 256l94.4-94.3zM281.8 103.8zM230.183 408.16l-29.233-7.97 80.85-296.484 29.234 7.972z"/>
+			</symbol>
+			<symbol id="f-icon-notes" viewBox="0 0 512 512">
+				<path d="M443.8 0H68.2C30.6 0 0 30.5 0 68v264.2c0 16.6 8.9 29.5 25.9 37.5 15.3 7.2 33.1 8.4 40.1 8.5V512l201.6-134h176.1c37.6 0 68.2-30.3 68.2-67.8V68c.1-37.5-30.5-68-68.1-68zM114 438V330H68.2c-11.1 0-19.2-8.8-19.2-19.8V68c0-11 8.2-20 19.2-20h375.5c11.1 0 19.2 9 19.2 20v242.2c0 11-8.2 19.8-19.2 19.8H244.2L114 438z"/>
+			</symbol>
+			<symbol id="f-icon-labels" viewBox="0 0 512 512">
+				<path d="M304 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM464 280c0 13.2-10.8 24-24 24h-48c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48zM144 280c0 13.2-10.8 24-24 24H72c-13.2 0-24-10.8-24-24v-48c0-13.2 10.8-24 24-24h48c13.2 0 24 10.8 24 24v48z"/>
+			</symbol>
+			<symbol id="f-icon-menu" viewBox="0 0 512 512">
+				<path d="M512 100c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 212c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 324c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24zM512 436c0 6.6-5.4 12-12 12H12c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h488c6.6 0 12 5.4 12 12v24z"/>
+			</symbol>
+			<symbol id="f-icon-settings" viewBox="0 0 512 512">
+				<path d="M256 377.3c-67.5 0-121.6-53.9-121.6-121.3s54-121.3 121.6-121.3S377.6 188.6 377.6 256 323.5 377.3 256 377.3zm0-215.6c-52.7 0-94.6 41.8-94.6 94.3s41.9 94.3 94.6 94.3 94.6-41.8 94.6-94.3-41.9-94.3-94.6-94.3zM293.2 512h-72.9L200 450c-13.5-4-27-9.4-39.2-16.2l-59.4 29.6L50 412.3 79.7 353c-6.8-12.1-12.2-25.6-16.2-39.1L0 292.4v-72.8l62.1-20.2c4.1-13.5 9.5-26.9 16.2-39.1L48.6 101 100 49.9l59.4 29.6c12.2-6.7 25.7-12.1 39.2-16.2L220.2 0h72.9l20.3 62c13.5 4 27 9.4 39.2 16.2L412 48.5l51.3 51.2-29.7 59.3c6.8 12.1 12.2 25.6 16.2 39.1l62.1 20.2V291l-62.1 20.2c-4.1 13.5-9.5 26.9-16.2 39.1l29.7 59.3-51.3 51.2-59.4-29.6c-12.2 6.7-25.7 12.1-39.2 16.2L293.2 512zm-54.1-26.9h35.1l18.9-57.9 6.8-1.3c16.2-4 31.1-10.8 45.9-18.9l6.8-4 54 26.9 24.3-24.3-27-53.9 4.1-6.7c8.1-13.5 14.9-29.6 18.9-45.8l1.4-6.7 58.1-18.9v-35l-58.1-18.9-1.4-6.7c-4.1-16.2-10.8-31-18.9-45.8l-4.1-6.7 27-53.9-24.3-24.3-54 26.9-6.8-4c-14.8-8.2-29.7-14.9-45.9-19l-6.8-1.3L274.2 27h-35.1l-18.9 57.9-6.8 1.3c-16.2 4-31.1 10.8-45.9 18.9l-6.8 4-54-26.9-24.3 24.3 27 53.9-4.1 6.7c-8.1 13.5-14.9 29.6-18.9 45.8l-1.4 6.7-58 18.9v35l58.1 18.9 1.4 6.7c4.1 16.2 10.8 31 18.9 45.8l4.1 6.7-27 53.9 24.3 24.3 54-26.9 6.8 4c14.9 8.1 29.7 14.8 45.9 18.9l6.8 1.3 18.8 58z"/>
+			</symbol>
+		</svg>
+		<!-- /fabricator icons -->
+		<!-- fabricator menu -->
+		<div class="f-menu">
+		
+			<div class="f-controls">
+				<div class="f-control f-global-control" data-f-toggle-control="labels" title="Toggle Labels">
+					<svg>
+						<use xlink:href="#f-icon-labels" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="notes" title="Toggle Notes">
+					<svg>
+						<use xlink:href="#f-icon-notes" />
+					</svg>
+				</div>
+				<div class="f-control f-global-control" data-f-toggle-control="code" title="Toggle Code">
+					<svg>
+						<use xlink:href="#f-icon-code" />
+					</svg>
+				</div>
+			</div>
+		
+			<ul>
+		
+				<li>
+					<a href="index.html" class="f-menu__heading">Overview</a>
+				</li>
+		
+				<li>
+					<a href="common.html" class="f-menu__heading">Common</a>
+					<ul>
+						<li>
+							<a href="common.html#colors">Colors</a>
+						</li>
+						<li>
+							<a href="common.html#grid">Grid</a>
+						</li>
+						<li>
+							<a href="common.html#typography">Typography</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="components.html" class="f-menu__heading">Components</a>
+					<ul>
+						<li>
+							<a href="components.html#alerts">Alerts</a>
+						</li>
+						<li>
+							<a href="components.html#animations">Animations</a>
+						</li>
+						<li>
+							<a href="components.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="components.html#checkbox">Checkbox</a>
+						</li>
+						<li>
+							<a href="components.html#dropdown">Dropdown</a>
+						</li>
+						<li>
+							<a href="components.html#footer">Footer</a>
+						</li>
+						<li>
+							<a href="components.html#header">Header</a>
+						</li>
+						<li>
+							<a href="components.html#info-box">Info Box</a>
+						</li>
+						<li>
+							<a href="components.html#inputs">Inputs</a>
+						</li>
+						<li>
+							<a href="components.html#messages">Messages</a>
+						</li>
+						<li>
+							<a href="components.html#pills">Pills</a>
+						</li>
+						<li>
+							<a href="components.html#progress-bar">Progress Bar</a>
+						</li>
+						<li>
+							<a href="components.html#radio-button">Radio Button</a>
+						</li>
+						<li>
+							<a href="components.html#step-card">Step Card</a>
+						</li>
+						<li>
+							<a href="components.html#textarea">Textarea</a>
+						</li>
+						<li>
+							<a href="components.html#toggle">Toggle</a>
+						</li>
+					</ul>
+				</li>
+		
+		
+				<li>
+					<a href="docs.html" class="f-menu__heading">Docs</a>
+					<ul>
+						<li>
+							<a href="docs.html#README">Readme</a>
+						</li>
+					</ul>
+				</li>
+		
+			</ul>
+		
+		
+		</div>
+		<!-- /fabricator menu -->
+		<div class="f-container">
+			<div class="f-control-bar">
+				<div class="f-control f-menu-toggle">
+					<svg>
+						<use xlink:href="#f-icon-menu" />
+					</svg>
+				</div>
+			</div>
+
+
+	
+
+    <div class="f-item-group" id="colors">
+    
+    	<div class="f-item-heading-group" data-f-toggle="labels">
+    		<h2 class="f-item-heading">Colors</h2>
+    		<div class="f-item-controls">
+    			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+    				<svg>
+    					<use xlink:href="#f-icon-notes" />
+    				</svg>
+    			</span>
+    			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    				<svg>
+    					<use xlink:href="#f-icon-code" />
+    				</svg>
+    			</span>
+    		</div>
+    	</div><div class="f-item-notes" data-f-toggle="notes">
+    	<p>The colors are defined as a map in <code>_common/_colors.scss</code>.</p>
+    <p>Usage:</p>
+    <pre><code>    .primary-blue {
+            background: color('primary', 'primary');
+        }
+    
+        .phone-input {
+            color: color('input', 'border')
+        }
+    </code></pre>
+    
+    </div>
+    <div class="f-item-preview">
+    	<h1>Color Palette</h2>
+    
+    	<h3 class="subheading subheading--divider">Primary</h3>
+    	<div class="color-container">
+    		<div class="color color--primary-primary">primary</div>
+    		<div class="color color--primary-light">light</div>
+    		<div class="color color--primary-translucent">translucent</div>
+    		<div class="color color--primary-divider">divider</div>
+    		<div class="color color--primary-disabled">disabled</div>
+    	</div>
+    
+    	<h3 class="subheading subheading--divider">Buttons</h3>
+    	<div class="color-container">
+    		<div class="color color--buttons-primary">primary</div>
+    		<div class="color color--buttons-hover">hover</div>
+    		<div class="color color--buttons-alternative">alternative</div>
+    	</div>
+    
+    	<h3 class="subheading subheading--divider">Text</h3>
+    	<div class="color-container">
+    		<div class="color color--text-primary">primary</div>
+    		<div class="color color--text-subheading">subheading</div>
+    		<div class="color color--text-title">title</div>
+    		<div class="color color--text-subtitle">subtitle</div>
+    		<div class="color color--text-body">body</div>
+    		<div class="color color--text-highlight">highlight</div>
+    		<div class="color color--text-input">input</div>
+    		<div class="color color--text-modal">modal</div>
+    	</div>
+    
+    	<h3 class="subheading subheading--divider">Anchor</h3>
+    	<div class="color-container">
+    		<div class="color color--anchor-negative">negative</div>
+    		<div class="color color--anchor-alternative">alternative</div>
+    	</div>
+    
+    	<h3 class="subheading subheading--divider">Borders</h3>
+    	<div class="color-container">
+    		<div class="color color--borders-primary">primary</div>
+    		<div class="color color--borders-light">light</div>
+    		<div class="color color--borders-gallery-item">gallery-item</div>
+    	</div>
+    
+    	<h3 class="subheading subheading--divider">Background</h3>
+    	<div class="color-container">
+    		<div class="color color--background-primary">primary</div>
+    		<div class="color color--background-secondary">secondary</div>
+    		<div class="color color--background-light">light</div>
+    		<div class="color color--background-modal">modal</div>
+    		<div class="color color--background-gallery-item">gallery-item</div>
+    		<div class="color color--background-translucent">translucent</div>
+    		<div class="color color--background-hover">hover</div>
+    	</div>
+    
+    	<h3 class="subheading subheading--divider">Input</h3>
+    	<div class="color-container">
+    		<div class="color color--input-primary">primary</div>
+    		<div class="color color--input-disabled">disabled</div>
+    		<div class="color color--input-border">border</div>
+    		<div class="color color--input-focus">focus</div>
+    		<div class="color color--input-mobile-border">mobile-border</div>
+    	</div>
+    
+    	<h3 class="subheading subheading--divider">Feedback</h3>
+    	<div class="color-container">
+    		<div class="color color--feedback-success">success</div>
+    		<div class="color color--feedback-warning">warning</div>
+    		<div class="color color--feedback-error">error</div>
+    		<div class="color color--feedback-info">info</div>
+    		<div class="color color--feedback-text">text</div>
+    	</div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;h1&gt;Color Palette&lt;/h2&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Primary&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--primary-primary&quot;&gt;primary&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--primary-light&quot;&gt;light&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--primary-translucent&quot;&gt;translucent&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--primary-divider&quot;&gt;divider&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--primary-disabled&quot;&gt;disabled&lt;/div&gt;
+    	&lt;/div&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Buttons&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--buttons-primary&quot;&gt;primary&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--buttons-hover&quot;&gt;hover&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--buttons-alternative&quot;&gt;alternative&lt;/div&gt;
+    	&lt;/div&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Text&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--text-primary&quot;&gt;primary&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--text-subheading&quot;&gt;subheading&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--text-title&quot;&gt;title&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--text-subtitle&quot;&gt;subtitle&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--text-body&quot;&gt;body&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--text-highlight&quot;&gt;highlight&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--text-input&quot;&gt;input&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--text-modal&quot;&gt;modal&lt;/div&gt;
+    	&lt;/div&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Anchor&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--anchor-negative&quot;&gt;negative&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--anchor-alternative&quot;&gt;alternative&lt;/div&gt;
+    	&lt;/div&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Borders&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--borders-primary&quot;&gt;primary&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--borders-light&quot;&gt;light&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--borders-gallery-item&quot;&gt;gallery-item&lt;/div&gt;
+    	&lt;/div&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Background&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--background-primary&quot;&gt;primary&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--background-secondary&quot;&gt;secondary&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--background-light&quot;&gt;light&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--background-modal&quot;&gt;modal&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--background-gallery-item&quot;&gt;gallery-item&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--background-translucent&quot;&gt;translucent&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--background-hover&quot;&gt;hover&lt;/div&gt;
+    	&lt;/div&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Input&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--input-primary&quot;&gt;primary&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--input-disabled&quot;&gt;disabled&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--input-border&quot;&gt;border&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--input-focus&quot;&gt;focus&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--input-mobile-border&quot;&gt;mobile-border&lt;/div&gt;
+    	&lt;/div&gt;
+    
+    	&lt;h3 class&#x3D;&quot;subheading subheading--divider&quot;&gt;Feedback&lt;/h3&gt;
+    	&lt;div class&#x3D;&quot;color-container&quot;&gt;
+    		&lt;div class&#x3D;&quot;color color--feedback-success&quot;&gt;success&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--feedback-warning&quot;&gt;warning&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--feedback-error&quot;&gt;error&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--feedback-info&quot;&gt;info&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;color color--feedback-text&quot;&gt;text&lt;/div&gt;
+    	&lt;/div&gt;</code></pre>
+    </div>
+    
+    
+    </div>
+    <div class="f-item-group" id="grid">
+    
+    	<div class="f-item-heading-group" data-f-toggle="labels">
+    		<h2 class="f-item-heading">Grid</h2>
+    		<div class="f-item-controls">
+    			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+    				<svg>
+    					<use xlink:href="#f-icon-notes" />
+    				</svg>
+    			</span>
+    			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    				<svg>
+    					<use xlink:href="#f-icon-code" />
+    				</svg>
+    			</span>
+    		</div>
+    	</div><div class="f-item-notes" data-f-toggle="notes">
+    	<p>Usage:</p>
+    <pre><code>    .row {
+            @include row();
+        }
+    </code></pre>
+    <p>You can define how many columns that element takes by sending it as a parameter.
+    The base grid has 12 columns.</p>
+    <pre><code>    .col {
+            &amp;--3 {
+                @include column(3);
+            }
+        }
+    </code></pre>
+    <p>You can also send the total number of columns as a second parameter.</p>
+    <pre><code>    .col {
+            &amp;--3 {
+                @include column(3, 24);
+            }
+        }
+    </code></pre>
+    <p>Or have a column that takes the full-width.</p>
+    <pre><code>    .col {
+            &amp;--full-width {
+                @include column(12);
+            }
+        }
+    </code></pre>
+    
+    </div>
+    <div class="f-item-preview">
+    	<div>
+    	<div class="row">
+    		<div class="col col--1 col--centered">1</div>
+    		<div class="col col--11 col--centered">11</div>
+    	</div>
+    	<div class="row">
+    		<div class="col col--2 col--centered">2</div>
+    		<div class="col col--10 col--centered">10</div>
+    	</div>
+    	<div class="row">
+    		<div class="col col--3 col--centered">3</div>
+    		<div class="col col--9 col--centered">9</div>
+    	</div>
+    	<div class="row">
+    		<div class="col col--4 col--centered">4</div>
+    		<div class="col col--8 col--centered">8</div>
+    	</div>
+    	<div class="row">
+    		<div class="col col--5 col--centered">5</div>
+    		<div class="col col--7 col--centered">7</div>
+    	</div>
+    	<div class="row">
+    		<div class="col col--6 col--centered">6</div>
+    		<div class="col col--6 col--centered">6</div>
+    	</div>
+    	<div class="col col--centered col--full-width">Full width</div>
+    </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;div&gt;
+    	&lt;div class&#x3D;&quot;row&quot;&gt;
+    		&lt;div class&#x3D;&quot;col col--1 col--centered&quot;&gt;1&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;col col--11 col--centered&quot;&gt;11&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;row&quot;&gt;
+    		&lt;div class&#x3D;&quot;col col--2 col--centered&quot;&gt;2&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;col col--10 col--centered&quot;&gt;10&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;row&quot;&gt;
+    		&lt;div class&#x3D;&quot;col col--3 col--centered&quot;&gt;3&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;col col--9 col--centered&quot;&gt;9&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;row&quot;&gt;
+    		&lt;div class&#x3D;&quot;col col--4 col--centered&quot;&gt;4&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;col col--8 col--centered&quot;&gt;8&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;row&quot;&gt;
+    		&lt;div class&#x3D;&quot;col col--5 col--centered&quot;&gt;5&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;col col--7 col--centered&quot;&gt;7&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;row&quot;&gt;
+    		&lt;div class&#x3D;&quot;col col--6 col--centered&quot;&gt;6&lt;/div&gt;
+    		&lt;div class&#x3D;&quot;col col--6 col--centered&quot;&gt;6&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class&#x3D;&quot;col col--centered col--full-width&quot;&gt;Full width&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+    
+    
+    </div>
+    <div class="f-item-group" id="typography">
+    
+    	<div class="f-item-heading-group" data-f-toggle="labels">
+    		<h2 class="f-item-heading">Typography</h2>
+    		<div class="f-item-controls">
+    			<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+    				<svg>
+    					<use xlink:href="#f-icon-notes" />
+    				</svg>
+    			</span>
+    			<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+    				<svg>
+    					<use xlink:href="#f-icon-code" />
+    				</svg>
+    			</span>
+    		</div>
+    	</div><div class="f-item-notes" data-f-toggle="notes">
+    	<p>Usage:</p>
+    <pre><code>.typography {
+        &amp;--heading {
+            @include heading();
+        }
+        &amp;--subheading {
+            @include subheading();
+        }
+        &amp;--title {
+            @include title();
+        }
+        &amp;--subtitle {
+            @include subtitle();
+        }
+        &amp;--body {
+            @include body();
+        }
+        &amp;--button-text {
+            @include button-text();
+        }
+        &amp;--anchor {
+            @include anchor();
+        }
+    }
+    </code></pre>
+    
+    </div>
+    <div class="f-item-preview">
+    	<div class="typography typography--heading">
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    </div>
+    <div class="typography typography--title">
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    </div>
+    <div class="typography typography--subheading">
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    </div>
+    <div class="typography typography--subtitle">
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    </div>
+    <div class="typography typography--body">
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    </div>
+    <div class="typography typography--button-text">
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    </div>
+    <div class="typography typography--anchor">
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    </div>
+    </div>
+    <div class="f-item-code f-item-hidden" data-f-toggle="code">
+    	<pre><code class="language-markup">&lt;div class&#x3D;&quot;typography typography--heading&quot;&gt;
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;typography typography--title&quot;&gt;
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;typography typography--subheading&quot;&gt;
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;typography typography--subtitle&quot;&gt;
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;typography typography--body&quot;&gt;
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;typography typography--button-text&quot;&gt;
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;typography typography--anchor&quot;&gt;
+    	uniQ - Uniplaces Internal CSS Framework/Toolkit
+    &lt;/div&gt;</code></pre>
+    </div>
+    
+    
+    </div>
+
+
+
+		</div>
+	<script src="/assets/fabricator/scripts/f.js"></script>
+
+	<!-- toolkit scripts -->
+	<script src="/assets/toolkit/scripts/toolkit.js"></script>
+	<!-- /toolkit scripts -->
+</body>
+</html>
