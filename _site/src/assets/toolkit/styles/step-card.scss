@@ -1,0 +1,6 @@
+.step-card{
+    @include step-card();
+    &__progress-bar__bar {
+        @include animateWidth(1s);
+    }
+}
