@@ -1,0 +1,71 @@
+@mixin alert() {
+    @include flex();
+    @include align-items-center();
+    padding: 15px 60px;
+    background-color: color('feedback', 'info');
+    will-change: background-color;
+    
+    &--success {
+        background-color: color('feedback', 'success');
+    }
+    &--warning {
+        background-color: color('feedback', 'warning');
+    }
+    &--fixed-top {
+        position: fixed;
+        width: 100%;
+        top: 65px;
+        left: 0;
+        z-index: 3;
+        margin-top: 0;
+        @include backface-hack();
+    }
+
+    svg {
+        width: 25px;
+        height: 25px;
+        margin-right: 16px;
+        fill: color('feedback', 'text');
+    }
+    &__wrapper {
+        @include flex();
+        @include align-items-center();
+        @include column(12);
+        @include limited-full-width();
+    }
+    &__title {
+        font-size: em(17px);
+        font-weight: bold;
+        color: color('text', 'title');
+    }
+    &__content {
+        font-size: em(16px);
+        line-height: 18px;
+        color: color('feedback', 'text');
+    }
+}
+
+@mixin pill() {
+    height: 22px;
+    padding: 6px 16px 0 16px;
+    border-radius: 22px;
+    font-size: em(12px);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+    color: color('pill', 'text');
+
+    &--success {
+        background-color: color('pill', 'success');
+    }
+    &--warning {
+        background-color: color('pill', 'warning');
+    }
+    &--error {
+        background-color: color('pill', 'error');
+    }
+    &--info {
+        background-color: color('pill', 'info');
+    }
+}
+
